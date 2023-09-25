@@ -28,6 +28,7 @@
 
         .checklist {
             text-align: left;
+            display: none; /* Hide the checklist by default */
         }
 
         /* Style for the login popup */
@@ -51,6 +52,11 @@
             padding: 20px;
             border-radius: 5px;
         }
+
+        /* Hide labels when checkbox is checked and not admin */
+        .checkbox-label input[type="checkbox"]:checked + label:not(.admin) {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -61,13 +67,13 @@
         <div id="checklist-container">
             <h3>Your Checklist</h3>
             <div class="checklist">
-                <label for="item1">
+                <label for="item1" class="checkbox-label">
                     <input type="checkbox" id="item1" class="admin"> Item 1
                 </label>
-                <label for="item2">
+                <label for="item2" class="checkbox-label">
                     <input type="checkbox" id="item2" class="admin"> Item 2
                 </label>
-                <label for="item3">
+                <label for="item3" class="checkbox-label">
                     <input type="checkbox" id="item3" class="admin"> Item 3
                 </label>
                 <!-- Add more checklist items as needed -->
@@ -89,7 +95,7 @@
     </div>
 
     <script>
-        const correctPassword = "mypassword"; // Change to your desired password
+        const correctPassword = "123"; // Change to your desired password
         const loginLink = document.getElementById("login-link");
         const loginPopup = document.getElementById("login-popup");
         const closePopup = document.getElementById("close-popup");
