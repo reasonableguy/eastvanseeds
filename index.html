@@ -16,16 +16,16 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #fff;
-            padding: 0;
+            padding: 20px;
         }
 
         header {
-            background-color: #fff;
+            background-color: #333;
             color: #333;
             text-align: center;
             padding: 10px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
         }
 
@@ -61,8 +61,7 @@
             width: 250px;
             height: 100%;
             background-color: #fff;
-            drop-shadow:2px 2px 4px #000;
-            color: #333;
+            color: #025029;
             transition: left 0.3s;
         }
 
@@ -70,7 +69,17 @@
             left: 0;
         }
 
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #025029;
+            font-size: 24px;
+        }
+
         .menu-icon {
+            display: block;
             position: fixed;
             top: 10px;
             left: 10px;
@@ -78,6 +87,10 @@
             z-index: 2;
             color: #025029;
             font-size: 24px;
+        }
+
+        .menu-icon.active {
+            display: none;
         }
 
         /* Media query for tablet/desktop */
@@ -113,6 +126,7 @@
     </header>
 
     <div class="drawer" id="drawer">
+        <span class="close-button" id="close-button">&times;</span>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -133,10 +147,17 @@
 
     <script>
         const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-button");
         const drawer = document.getElementById("drawer");
 
         menuIcon.addEventListener("click", function () {
-            drawer.classList.toggle("active");
+            drawer.classList.add("active");
+            menuIcon.classList.add("active");
+        });
+
+        closeIcon.addEventListener("click", function () {
+            drawer.classList.remove("active");
+            menuIcon.classList.remove("active");
         });
     </script>
 </body>
