@@ -28,12 +28,6 @@
 
         .checklist {
             text-align: left;
-            display: none; /* Hide the checklist by default */
-        }
-
-        .checkbox-label {
-            display: block;
-            margin-bottom: 10px;
         }
 
         /* Style for the login popup */
@@ -67,14 +61,14 @@
         <div id="checklist-container">
             <h3>Your Checklist</h3>
             <div class="checklist">
-                <label class="checkbox-label">
-                    <input type="checkbox" class="admin"> Item 1 <!-- Add the "admin" class to the checkbox to show it by default when logged in -->
+                <label for="item1">
+                    <input type="checkbox" id="item1" class="admin"> Item 1
                 </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="admin"> Item 2
+                <label for="item2">
+                    <input type="checkbox" id="item2" class="admin"> Item 2
                 </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="admin"> Item 3
+                <label for="item3">
+                    <input type="checkbox" id="item3" class="admin"> Item 3
                 </label>
                 <!-- Add more checklist items as needed -->
             </div>
