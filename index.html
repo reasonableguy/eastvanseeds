@@ -24,6 +24,15 @@
             color: #fff;
             text-align: center;
             padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Logo styles */
+        .logo img {
+            width: 100px; /* Set the desired width */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
         }
 
         .container {
@@ -42,6 +51,32 @@
         p {
             font-size: 16px;
             line-height: 1.5;
+        }
+
+        /* Navigation drawer styles */
+        .drawer {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: #fff;
+            transition: left 0.3s;
+        }
+
+        .drawer.active {
+            left: 0;
+        }
+
+        .menu-icon {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            z-index: 2;
+            color: #fff;
+            font-size: 24px;
         }
 
         /* Media query for tablet/desktop */
@@ -70,8 +105,20 @@
 </head>
 <body>
     <header>
-        <h1>Your Mobile-Responsive Website</h1>
+        <div class="logo">
+            <img src="your-logo-image.png" alt="Logo"> <!-- Replace with your logo image path -->
+        </div>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
     </header>
+
+    <div class="drawer" id="drawer">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
 
     <div class="container">
         <h1>Welcome to Our Website</h1>
@@ -82,5 +129,14 @@
         <h1>Another Section</h1>
         <p>This is another section of content on your webpage. It will also adapt to different screen sizes.</p>
     </div>
+
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const drawer = document.getElementById("drawer");
+
+        menuIcon.addEventListener("click", function () {
+            drawer.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
