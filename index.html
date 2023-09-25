@@ -16,6 +16,10 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #fff;
+            display: flex; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            min-height: 100vh; /* Ensure full viewport height */
         }
         header {
             background-color: #fff;
@@ -25,23 +29,23 @@
         }
         .container {
             max-width: 1200px;
-            margin: 0 auto;
             padding: 20px;
         }
-      .logo {
+        .logo {
             width: 100px; /* Set the desired width */
             height: 100px; /* Set the desired height */
             background-image: url('https://d33wubrfki0l68.cloudfront.net/182b05be-38e8-4ea4-8dac-86ae3031b6f3/east%20van%20seeds%20logo.png'); /* Logo image URL */
             background-size: contain; /* Scale the background image to fit within the div */
             background-repeat: no-repeat; /* Prevent the background image from repeating */
+            margin: 0 auto; /* Center horizontally within the container */
         }
-        .hamburger-menu{
-            display:none;
+        .hamburger-menu {
+            display: none;
         }
         nav {
             display: flex;
             justify-content: center;
-            width:100%;
+            width: 100%;
         }
         nav ul {
             list-style-type: none;
@@ -101,9 +105,9 @@
             </nav>
         </div>
     </header>
-
+    
+    <!-- Your webpage content goes here -->
     <div class="container">
-        <!-- Your webpage content goes here -->
         <h1>Welcome to Your Website</h1>
         <p>This is a simple webpage with a centered logo and a responsive navigation menu.</p>
     </div>
@@ -119,5 +123,3 @@
     </script>
 </body>
 </html>
-
-  
