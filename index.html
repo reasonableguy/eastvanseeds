@@ -33,9 +33,11 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            margin-right: 20px;
+            width: 150px; /* Set the desired width */
+            height: 150px; /* Set the desired height */
+            background-image: url('https://d33wubrfki0l68.cloudfront.net/182b05be-38e8-4ea4-8dac-86ae3031b6f3/east%20van%20seeds%20logo.png'); /* Logo image URL */
+            background-size: contain; /* Scale the background image to fit within the div */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
         }
 
         nav ul {
@@ -67,7 +69,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li class="logo">Your Logo</li>
+                    <li class="logo"></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -78,7 +80,7 @@
     <div class="container">
         <!-- Your webpage content goes here -->
         <h1>Welcome to Your Website</h1>
-        <p>This is a simple webpage with the logo as the middle link in the navigation.</p>
+        <p>This is a simple webpage with the logo as a background image limited to 150px in size.</p>
     </div>
 </body>
 </html>
