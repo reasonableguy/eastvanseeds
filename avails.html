@@ -12,7 +12,7 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f5f5f5;
@@ -29,6 +29,24 @@
         .checklist {
             text-align: left;
             display: none; /* Hide the checklist by default */
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
         }
 
         /* Style for the login popup */
@@ -67,16 +85,31 @@
         <div id="checklist-container">
             <h3>Your Checklist</h3>
             <div class="checklist">
-                <label for="item1" class="checkbox-label">
-                    <input type="checkbox" id="item1" class="admin"> Item 1
-                </label>
-                <label for="item2" class="checkbox-label">
-                    <input type="checkbox" id="item2" class="admin"> Item 2
-                </label>
-                <label for="item3" class="checkbox-label">
-                    <input type="checkbox" id="item3" class="admin"> Item 3
-                </label>
-                <!-- Add more checklist items as needed -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Checklist items -->
+                        <tr>
+                            <td class="checkbox-label">
+                                <input type="checkbox" id="item1" class="admin"> Item 1
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="checkbox-label">
+                                <input type="checkbox" id="item2" class="admin"> Item 2
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!-- Add more checklist items as needed -->
+                        <!-- Repeat this structure for all 20 items -->
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -95,7 +128,7 @@
     </div>
 
     <script>
-        const correctPassword = "123"; // Change to your desired password
+        const correctPassword = "mypassword"; // Change to your desired password
         const loginLink = document.getElementById("login-link");
         const loginPopup = document.getElementById("login-popup");
         const closePopup = document.getElementById("close-popup");
