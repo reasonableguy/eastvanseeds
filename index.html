@@ -5,42 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website Title</title>
     <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
         }
+
         header {
             background-color: #333;
             color: #fff;
             padding: 10px 0;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
         .logo {
-            display: inline-block;
             font-size: 24px;
             font-weight: bold;
         }
-        nav {
-            float: right;
-        }
+
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
         }
+
         nav ul li {
-            display: inline;
             margin-right: 20px;
         }
+
         nav ul li:last-child {
             margin-right: 0;
         }
+
         nav ul li a {
             text-decoration: none;
             color: #fff;
@@ -66,7 +77,7 @@
     <div class="container">
         <!-- Your webpage content goes here -->
         <h1>Welcome to Your Website</h1>
-        <p>This is a simple webpage with a navigation bar and a logo.</p>
+        <p>This is a simple webpage with a centered logo and a split desktop menu.</p>
     </div>
 </body>
 </html>
