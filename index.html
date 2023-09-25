@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website </title>
+    <title>Your Website Title</title>
     <style>
         /* Reset some default styles */
         * {
@@ -17,150 +17,135 @@
             font-family: Arial, sans-serif;
             background-color: #fff;
             margin: 0;
-        }
-        header {
-            background-color: #fff;
-            color: #333;
-            text-align: center;
-            padding: 10px 0;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        header > .container {
-            padding: 0 0 20px 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            overflow-x: hidden;
         }
 
-        .container.content {
-            background-color:pink;
-            height:1000px;
-        }
-        .logo {
-            width: 220px; /* Set the desired width */
-            height: 110px; /* Set the desired height */
-            background-image: url('https://d33wubrfki0l68.cloudfront.net/32fd2bb7-ce4b-4c93-9de0-c4cab276f79a/east%20van%20seeds%20web%20logo.png'); /* Logo image URL */
-            background-size: contain; /* Scale the background image to fit within the div */
-            background-repeat: no-repeat; /* Prevent the background image from repeating */
-            margin: 0 auto; /* Center horizontally within the container */
-        }
-        .hamburger-menu {
-            display: block;
-        }
-        nav {
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             display: flex;
             justify-content: center;
-            width: 100%;
-            background-color: #025029;
-            padding: 10px 15px;
-            margin: 20px auto;
+            align-items: center;
+            height: 100px;
+            background-image: url('your-background-image.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            transition: height 0.3s, background-size 0.3s;
         }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-           nav {
-                display: none;
-            }
-            /* Styles for hamburger menu */
-            .hamburger-menu {
-                display: block;
-                cursor: pointer;
-                font-size: 20px;
-                margin-top: 20px;
-            }
-            .hamburger-menu.active {
-                display: none;
-            }
-            .mobile-menu.active {
-                display: block;
-                text-align: center;
-            }
 
-        h1 {
-            color: #025029;
+        .logo {
+            width: 180px; /* Set the desired width */
+            height: 110px; /* Set the desired height */
+            background-image: url('your-logo-image.png'); /* Replace with your logo image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: width 0.3s, height 0.3s, background-size 0.3s;
+        }
+
+        .nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #333;
+            width: 250px;
+            transition: transform 0.3s;
+        }
+
+        .nav.active {
+            transform: translateX(0);
+        }
+
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            z-index: 1;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .menu-toggle.active {
+            transform: rotate(180deg);
         }
 
         /* Media query for responsive design */
         @media screen and (max-width: 900px) {
             header {
-                position: -webkit-sticky;
-                position: sticky;
-                top: -50px;
-                background-color: #fff;
-                transition: top 0.3s;
-                z-index: 100;
+                height: 50px;
+                background-size: 50%;
             }
-            header.active {
-                top: 0;
-            }
+
             .logo {
-                text-align: center;
+                width: 100px;
+                height: 50px;
+                background-size: 50%;
             }
-         
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav {
+                height: 100%;
+                transform: translateX(100%);
+            }
+
+            .nav.active {
+                transform: translateX(0);
+            }
         }
+
+        /* Your additional styles go here */
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo"></div>
-            <div class="hamburger-menu" id="hamburger-menu">&#9776;</div>
-            <nav>
-                <ul class="mobile-menu" id="mobile-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="logo"></div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     </header>
 
-    <div class="container content">
-        <!-- Your webpage content goes here -->
-        <h1>Welcome to Your Website</h1>
-        <p>This is a simple webpage with a centered logo and a responsive navigation menu.</p>
-    </div>
+    <nav class="nav" id="nav">
+        <!-- Your navigation links go here -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
     <script>
-        // JavaScript to toggle the mobile menu
-        const hamburgerMenu = document.getElementById("hamburger-menu");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const header = document.querySelector("header");
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.getElementById("nav");
 
-        hamburgerMenu.addEventListener("click", function () {
-            mobileMenu.classList.toggle("active");
+        menuToggle.addEventListener("click", function () {
+            nav.classList.toggle("active");
+            menuToggle.classList.toggle("active");
         });
 
-        // JavaScript for sticky header behavior on mobile
-        let lastScrollTop = 0;
         window.addEventListener("scroll", function () {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > 50) {
-                header.classList.add("active");
+            const header = document.querySelector("header");
+            const logo = document.querySelector(".logo");
+
+            if (window.scrollY > 0) {
+                header.style.height = "50px";
+                header.style.backgroundSize = "50%";
+                logo.style.width = "50px";
+                logo.style.height = "50px";
+                logo.style.backgroundSize = "50%";
             } else {
-                header.classList.remove("active");
+                header.style.height = "100px";
+                header.style.backgroundSize = "cover";
+                logo.style.width = "200px";
+                logo.style.height = "200px";
+                logo.style.backgroundSize = "contain";
             }
-            lastScrollTop = scrollTop;
         });
     </script>
 </body>
