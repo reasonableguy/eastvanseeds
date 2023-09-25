@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .checklist {
+            text-align: left;
+        }
+
+        .checkbox-label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Private Page</h2>
+
+        <!-- Password Input Form -->
+        <form id="password-form">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" class="password-input">
+            <button type="button" id="submit-button">Submit</button>
+        </form>
+
+        <!-- Checklist -->
+        <div id="checklist-container" style="display: none;">
+            <h3>Your Checklist</h3>
+            <div class="checklist">
+                <label class="checkbox-label">
+                    <input type="checkbox"> Item 1
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox"> Item 2
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox"> Item 3
+                </label>
+                <!-- Add more checklist items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Password for accessing the page (change this to your desired password)
+        const correctPassword = "christiisgr8";
+
+        const passwordForm = document.getElementById("password-form");
+        const passwordInput = document.getElementById("password");
+        const submitButton = document.getElementById("submit-button");
+        const checklistContainer = document.getElementById("checklist-container");
+
+        submitButton.addEventListener("click", function () {
+            const enteredPassword = passwordInput.value;
+
+            if (enteredPassword === correctPassword) {
+                passwordForm.style.display = "none";
+                checklistContainer.style.display = "block";
+            } else {
+                alert("Incorrect password. Please try again.");
+                passwordInput.value = "";
+            }
+        });
+    </script>
+</body>
+</html>
