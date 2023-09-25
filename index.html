@@ -50,7 +50,7 @@
             margin: 0 auto; /* Center horizontally within the container */
         }
         .hamburger-menu {
-            display: none;
+            display: block;
         }
         nav {
             display: flex;
@@ -77,6 +77,23 @@
             color: #fff;
             font-weight: bold;
         }
+           nav {
+                display: none;
+            }
+            /* Styles for hamburger menu */
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+                font-size: 20px;
+                margin-top: 20px;
+            }
+            .hamburger-menu.active {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+                text-align: center;
+            }
 
         h1 {
             color: #025029;
@@ -98,23 +115,7 @@
             .logo {
                 text-align: center;
             }
-            nav {
-                display: none;
-            }
-            /* Styles for hamburger menu */
-            .hamburger-menu {
-                display: block;
-                cursor: pointer;
-                font-size: 20px;
-                margin-top: 20px;
-            }
-            .hamburger-menu.active {
-                display: none;
-            }
-            .mobile-menu.active {
-                display: block;
-                text-align: center;
-            }
+         
         }
     </style>
 </head>
