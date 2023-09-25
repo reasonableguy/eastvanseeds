@@ -34,20 +34,35 @@
             display: block;
             margin-bottom: 10px;
         }
+
+        /* Style for the login popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Private Page</h2>
+        <p>This is a private page.</p>
 
-        <!-- Password Input Form -->
-        <form id="password-form">
-            <label for="password">Enter Password:</label>
-            <input type="password" id="password" class="password-input">
-            <button type="button" id="submit-button">Submit</button>
-        </form>
-
-        <!-- Checklist -->
         <div id="checklist-container" style="display: none;">
             <h3>Your Checklist</h3>
             <div class="checklist">
@@ -63,28 +78,63 @@
                 <!-- Add more checklist items as needed -->
             </div>
         </div>
+
+        <p><a href="#" id="login-link">Login</a></p>
+    </div>
+
+    <!-- Login Popup -->
+    <div class="popup" id="login-popup">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <label for="login-password">Enter Password:</label>
+            <input type="password" id="login-password" class="password-input">
+            <button type="button" id="login-button">Submit</button>
+            <p><a href="#" id="close-popup">Close</a></p>
+        </div>
     </div>
 
     <script>
-        // Password for accessing the page (change this to your desired password)
-        const correctPassword = "christiisgr8";
-
-        const passwordForm = document.getElementById("password-form");
-        const passwordInput = document.getElementById("password");
-        const submitButton = document.getElementById("submit-button");
+        const correctPassword = "mypassword"; // Change to your desired password
+        const loginLink = document.getElementById("login-link");
+        const loginPopup = document.getElementById("login-popup");
+        const closePopup = document.getElementById("close-popup");
+        const loginPasswordInput = document.getElementById("login-password");
+        const loginButton = document.getElementById("login-button");
         const checklistContainer = document.getElementById("checklist-container");
+        const checkboxes = document.querySelectorAll(".checkbox-label input[type='checkbox']");
 
-        submitButton.addEventListener("click", function () {
-            const enteredPassword = passwordInput.value;
+        // Function to show the login popup
+        function showLoginPopup() {
+            loginPopup.style.display = "block";
+        }
+
+        // Function to close the login popup
+        function closeLoginPopup() {
+            loginPopup.style.display = "none";
+        }
+
+        // Function to handle login
+        function handleLogin() {
+            const enteredPassword = loginPasswordInput.value;
 
             if (enteredPassword === correctPassword) {
-                passwordForm.style.display = "none";
+                closeLoginPopup();
                 checklistContainer.style.display = "block";
+
+                // Add the "admin" class to all checkboxes when logged in
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.classList.add("admin");
+                });
             } else {
                 alert("Incorrect password. Please try again.");
-                passwordInput.value = "";
+                loginPasswordInput.value = "";
             }
-        });
+        }
+
+        // Event listeners
+        loginLink.addEventListener("click", showLoginPopup);
+        closePopup.addEventListener("click", closeLoginPopup);
+        loginButton.addEventListener("click", handleLogin);
     </script>
 </body>
 </html>
