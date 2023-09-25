@@ -10,19 +10,23 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-         
         }
 
         /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
             background-color: #fff;
+            margin: 0;
         }
         header {
             background-color: #fff;
             color: #333;
             text-align: center;
             padding: 10px 0;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         header > .container {
             padding: 0 0 20px 0;
@@ -32,22 +36,22 @@
             margin: 0 auto;
             padding: 20px;
         }
-      .logo {
+        .logo {
             width: 220px; /* Set the desired width */
             height: 110px; /* Set the desired height */
             background-image: url('https://d33wubrfki0l68.cloudfront.net/32fd2bb7-ce4b-4c93-9de0-c4cab276f79a/east%20van%20seeds%20web%20logo.png'); /* Logo image URL */
             background-size: contain; /* Scale the background image to fit within the div */
             background-repeat: no-repeat; /* Prevent the background image from repeating */
-          margin:0 auto;
+            margin: 0 auto; /* Center horizontally within the container */
         }
-        .hamburger-menu{
-            display:none;
+        .hamburger-menu {
+            display: none;
         }
         nav {
             display: flex;
             justify-content: center;
-            width:100%;
-            background-color:#025029;
+            width: 100%;
+            background-color: #025029;
             padding: 10px 15px;
             margin: 20px auto;
         }
@@ -56,7 +60,6 @@
             margin: 0;
             padding: 0;
             display: flex;
-            
         }
         nav ul li {
             margin-right: 20px;
@@ -76,6 +79,17 @@
 
         /* Media query for responsive design */
         @media screen and (max-width: 900px) {
+            header {
+                position: -webkit-sticky;
+                position: sticky;
+                top: -50px;
+                background-color: #fff;
+                transition: top 0.3s;
+                z-index: 100;
+            }
+            header.active {
+                top: 0;
+            }
             .logo {
                 text-align: center;
             }
@@ -125,9 +139,22 @@
         // JavaScript to toggle the mobile menu
         const hamburgerMenu = document.getElementById("hamburger-menu");
         const mobileMenu = document.getElementById("mobile-menu");
+        const header = document.querySelector("header");
 
         hamburgerMenu.addEventListener("click", function () {
             mobileMenu.classList.toggle("active");
+        });
+
+        // JavaScript for sticky header behavior on mobile
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function () {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 50) {
+                header.classList.add("active");
+            } else {
+                header.classList.remove("active");
+            }
+            lastScrollTop = scrollTop;
         });
     </script>
 </body>
