@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>Your Mobile Responsive Website</title>
     <style>
         /* Reset some default styles */
         * {
@@ -12,141 +12,75 @@
             box-sizing: border-box;
         }
 
-        /* Add your CSS styles here */
+        /* Basic styles for mobile-first design */
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
-            margin: 0;
-            overflow-x: hidden;
+            background-color: #f0f0f0;
+            padding: 20px;
         }
 
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            background-image: url('your-background-image.jpg'); /* Replace with your background image */
-            background-size: cover;
-            background-position: center;
-            transition: height 0.3s, background-size 0.3s;
-        }
-
-        .logo {
-            width: 180px; /* Set the desired width */
-            height: 110px; /* Set the desired height */
-            background-image: url('your-logo-image.png'); /* Replace with your logo image */
-            background-size: contain;
-            background-repeat: no-repeat;
-            transition: width 0.3s, height 0.3s, background-size 0.3s;
-        }
-
-        .nav {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
             background-color: #333;
-            width: 250px;
-            transition: transform 0.3s;
-        }
-
-        .nav.active {
-            transform: translateX(0);
-        }
-
-        .menu-toggle {
-            display: none;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            z-index: 1;
             color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
             font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        .menu-toggle.active {
-            transform: rotate(180deg);
+        p {
+            font-size: 16px;
+            line-height: 1.5;
         }
 
-        /* Media query for responsive design */
-        @media screen and (max-width: 900px) {
-            header {
-                height: 50px;
-                background-size: 50%;
+        /* Media query for tablet/desktop */
+        @media screen and (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                margin: 20px auto;
             }
 
-            .logo {
-                width: 100px;
-                height: 50px;
-                background-size: 50%;
+            h1 {
+                font-size: 32px;
             }
 
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav {
-                height: 100%;
-                transform: translateX(100%);
-            }
-
-            .nav.active {
-                transform: translateX(0);
+            p {
+                font-size: 18px;
             }
         }
 
-        /* Your additional styles go here */
+        /* Media query for larger desktops */
+        @media screen and (min-width: 1200px) {
+            .container {
+                max-width: 1200px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo"></div>
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <h1>Your Mobile-Responsive Website</h1>
     </header>
 
-    <nav class="nav" id="nav">
-        <!-- Your navigation links go here -->
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a simple, responsive webpage that adapts to different screen sizes, including mobile devices.</p>
+    </div>
 
-    <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const nav = document.getElementById("nav");
-
-        menuToggle.addEventListener("click", function () {
-            nav.classList.toggle("active");
-            menuToggle.classList.toggle("active");
-        });
-
-        window.addEventListener("scroll", function () {
-            const header = document.querySelector("header");
-            const logo = document.querySelector(".logo");
-
-            if (window.scrollY > 0) {
-                header.style.height = "50px";
-                header.style.backgroundSize = "50%";
-                logo.style.width = "50px";
-                logo.style.height = "50px";
-                logo.style.backgroundSize = "50%";
-            } else {
-                header.style.height = "100px";
-                header.style.backgroundSize = "cover";
-                logo.style.width = "200px";
-                logo.style.height = "200px";
-                logo.style.backgroundSize = "contain";
-            }
-        });
-    </script>
+    <div class="container">
+        <h1>Another Section</h1>
+        <p>This is another section of content on your webpage. It will also adapt to different screen sizes.</p>
+    </div>
 </body>
 </html>
