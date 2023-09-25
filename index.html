@@ -15,50 +15,70 @@
         /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
         }
-
         header {
-            background-color: #fff;
-            color: #333;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
             padding: 10px 0;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
-
-        .logo {
+      .logo {
             width: 150px; /* Set the desired width */
             height: 150px; /* Set the desired height */
             background-image: url('https://d33wubrfki0l68.cloudfront.net/182b05be-38e8-4ea4-8dac-86ae3031b6f3/east%20van%20seeds%20logo.png'); /* Logo image URL */
             background-size: contain; /* Scale the background image to fit within the div */
             background-repeat: no-repeat; /* Prevent the background image from repeating */
         }
-
+        nav {
+            display: flex;
+            justify-content: center;
+        }
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
         }
-
         nav ul li {
             margin-right: 20px;
         }
-
         nav ul li:last-child {
             margin-right: 0;
         }
-
         nav ul li a {
             text-decoration: none;
             color: #fff;
             font-weight: bold;
+        }
+
+        /* Media query for responsive design */
+        @media screen and (max-width: 900px) {
+            .logo {
+                text-align: center;
+            }
+            nav {
+                display: none;
+            }
+            /* Styles for hamburger menu */
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+                font-size: 20px;
+                margin-top: 20px;
+            }
+            .hamburger-menu.active {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -66,8 +86,9 @@
     <header>
         <div class="container">
             <div class="logo"></div>
+            <div class="hamburger-menu" id="hamburger-menu">&#9776;</div>
             <nav>
-                <ul>
+                <ul class="mobile-menu" id="mobile-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
@@ -80,7 +101,19 @@
     <div class="container">
         <!-- Your webpage content goes here -->
         <h1>Welcome to Your Website</h1>
-        <p>This is a simple webpage with the logo as a background image limited to 150px in size.</p>
+        <p>This is a simple webpage with a centered logo and a responsive navigation menu.</p>
     </div>
+
+    <script>
+        // JavaScript to toggle the mobile menu
+        const hamburgerMenu = document.getElementById("hamburger-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        hamburgerMenu.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
+
+  
