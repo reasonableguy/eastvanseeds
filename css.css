@@ -59,6 +59,12 @@ width: 100%;
             font-size: 16px;
             line-height: 1.5;
         }
+label {
+    width: 100%;
+    display: block;
+    margin: 10px;
+    font-size: 1.2em;
+}
 
         /* Navigation drawer styles */
         .drawer {
