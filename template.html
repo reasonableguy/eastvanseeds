@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+			<link rel="stylesheet" href="css.css"> 
+
+    <title>East Van Seeds</title>
+</head>
+
+
+    	<div class="header" w3-include-html="/header.html"></div>
+
+	
+
+
+
+    
+    
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a simple, responsive webpage that adapts to different screen sizes, including mobile devices.</p>
+    </div>
+
+    <div class="container">
+        <h1>Another Section</h1>
+<p>another section</p> 
+    </div>
+
+   
+</body>
+	  <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-button");
+        const drawer = document.getElementById("drawer");
+
+        menuIcon.addEventListener("click", function () {
+            drawer.classList.add("active");
+            menuIcon.classList.add("active");
+        });
+
+        closeIcon.addEventListener("click", function () {
+            drawer.classList.remove("active");
+            menuIcon.classList.remove("active");
+        });
+    </script> 
+      <script>
+w3.includeHTML();
+</script>
+</html>
