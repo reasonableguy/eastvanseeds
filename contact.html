@@ -30,6 +30,21 @@
 </form>
 	  </div>
 </body>
+	<script>
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-button");
+        const drawer = document.getElementById("drawer");
+
+        menuIcon.addEventListener("click", function () {
+            drawer.classList.add("active");
+            menuIcon.classList.add("active");
+        });
+
+        closeIcon.addEventListener("click", function () {
+            drawer.classList.remove("active");
+            menuIcon.classList.remove("active");
+        });
+    </script>
  <script>
 w3.includeHTML();
 </script>
