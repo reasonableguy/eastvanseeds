@@ -70,7 +70,8 @@ input {
 
 textarea {
    font-size: 1.2em !important;
-    padding: 5px 10px;
+    font-family:arial;
+        padding: 5px 10px;
     width: 100%;
     border: 1px solid #025029;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
