@@ -108,7 +108,7 @@ button {
 
         .drawer.active {
             top: 0;
-                left:0
+                left:0;
 box-shadow: 4px 0px 10px rgba(2, 80, 41, .1);
         }
 ul {
