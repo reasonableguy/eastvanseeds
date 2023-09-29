@@ -105,12 +105,12 @@ button {
     transition: left 0.3s;
     z-index: 2;
     display: none;
-    max-width: 1160px;
+    max-width: 1200px;
         }
 
         .drawer.active {
         top: 0;
-    left: 20px;
+    left: 0px;
     box-shadow: 4px 0px 10px rgba(2, 80, 41, .4);
     display: block;
         }
@@ -134,10 +134,10 @@ ul {
         .close-button {
             position: absolute;
             top: 10px;
-            right: 10px;
+            left: 20px;
             cursor: pointer;
             color: #025029;
-            font-size: 24px;
+            font-size: 40px;
         }
 
         .menu-icon {
