@@ -97,17 +97,18 @@ button {
         /* Navigation drawer styles */
         .drawer {
             position: fixed;
-            top: 0;
+            top: -400px;
             left: -80vw;
             width: 80vw;
-            height: 100%;
+            height: 400px;
             background-color: #fff;
             color: #025029 !important;
             transition: left 0.3s;
         }
 
         .drawer.active {
-            left: 0;
+            top: 0;
+                left:0
 box-shadow: 4px 0px 10px rgba(2, 80, 41, .1);
         }
 ul {
