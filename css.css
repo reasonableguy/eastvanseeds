@@ -96,24 +96,27 @@ button {
 
         /* Navigation drawer styles */
         .drawer {
-            position: absolute;
-            top: -400px;
-            left: -80vw;
-            width: 80vw;
-            height: 400px;
-            background-color: #fff;
-            color: #025029 !important;
-            transition: left 0.3s;
-                z-index:2;
+  position: absolute;
+
+    width: 80vw;
+    height: 400px;
+    background-color: #fff;
+    color: #025029 !important;
+    transition: left 0.3s;
+    z-index: 2;
+    display: none;
+    max-width: 1160px;
         }
 
         .drawer.active {
-            top: 0;
-                left:0;
-box-shadow: 4px 0px 10px rgba(2, 80, 41, .1);
+        top: 0;
+    left: 20px;
+    box-shadow: 4px 0px 10px rgba(2, 80, 41, .4);
+    display: block;
         }
 ul {
     margin-top:50px;
+        list-style-type:none;
 }
 
         li {
