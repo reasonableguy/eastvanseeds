@@ -120,7 +120,9 @@ ul {
 }
 
         li {
-          padding: 10px 0 10px 50px;
+       padding: 10px 0 10px 50px;
+    font-size: 1.6em;
+    color: #025029;
   }
         
         
