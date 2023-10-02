@@ -43,27 +43,12 @@
     
     <div class="container">
         <h1>Welcome to Our Website</h1>
- <script type="application/javascript">
-
-function resizeIFrameToFitContent( iFrame ) {
-
-    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
-}
-
-window.addEventListener('DOMContentLoaded', function(e) {
-
-    var iFrame = document.getElementById( 'iFrame1' );
-    resizeIFrameToFitContent( iFrame );
-
-    // or, to resize all iframes:
-    var iframes = document.querySelectorAll("iframe");
-    for( var i = 0; i < iframes.length; i++) {
-        resizeIFrameToFitContent( iframes[i] );
-    }
-} );
-
-</script>
+<style>
+   #iframe1 {
+      width: 100%;
+      height: 100%;
+   }
+</style>
 
 <iframe src="https://farmfolkcityfolk.ca/find-seeds/seed-libraries/?_seed_libraries=49.219763%2C-123.309536%2C49.398833%2C-122.826825" id="iFrame1"></iframe>
     </div>
