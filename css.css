@@ -68,6 +68,9 @@ input {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
         margin: 5px auto;
 }
+iframe{
+        width:100%;
+}
 
 textarea {
    font-size: 1.2em !important;
