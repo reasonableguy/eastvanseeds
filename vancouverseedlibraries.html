@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+			<link rel="stylesheet" href="css.css"> 
+<meta property="og:title" content="East Van Seeds - Map of Vancouver Seed Libraries">
+  	<meta property="og:url" content="https://eastvanseeds.com/vancouverseedlibrariesmap/?og=1">
+	<link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/65352e65-e228-49af-af2f-91850792b517/Favicon.png" type="image/png">
+    <title>East Van Seeds - Map of Vancouver Seed Libraries</title>
+</head>
+
+
+<header>
+        <div class="headblock">
+      <div class="logo">
+            <img src="https://d33wubrfki0l68.cloudfront.net/fc2f163f-8653-46f6-a80a-285e86037be5/EVS%20RECTANGLE.png" alt="Logo"> <!-- Replace with your logo image path -->
+        </div>
+      <div class="menu-icon" id="menu-icon">&#9776;</div>
+		  <div class="drawer" id="drawer">
+        <span class="close-button" id="close-button">&times;</span>
+        <ul>
+             <a href="/">  <li>Home</li></a>
+         <a href="/about"><li>About</li></a>
+            <a href="/resources"><li>Resources</li></a>
+            <a href="/contact"><li>Contact</li></a>
+        </ul>
+    </div>
+        </div>
+    </header>
+
+  
+
+
+
+    
+    
+    <div class="container">
+        <h1>Map of Vancouver Seed Libraries</h1>
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12Tc3Ovz3zo7rS0aW8LU_pNAaJnL_KSk&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+    </div>
+
+    <div class="container">
+        <h1>Add a Library </h1>
+<p>If you know a seed library that isn't on here, <a href="/contact">please let us know</a>.</p> 
+    </div>
+
+   
+</body>
+	  <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-button");
+        const drawer = document.getElementById("drawer");
+
+        menuIcon.addEventListener("click", function () {
+            drawer.classList.add("active");
+            menuIcon.classList.add("active");
+        });
+
+        closeIcon.addEventListener("click", function () {
+            drawer.classList.remove("active");
+            menuIcon.classList.remove("active");
+        });
+    </script> 
+      <script>
+w3.includeHTML();
+</script>
+</html>
