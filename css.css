@@ -195,6 +195,7 @@ a {
             margin-bottom: 20px;
             position: relative;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                padding:10px;
         }
 
         .gallery-item img {
@@ -214,6 +215,7 @@ a {
             color: #025029;
             padding: 10px;
             text-align: center;
+                max-width:15ch;
         }
 
         /* Remove default link styles */
