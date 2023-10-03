@@ -220,7 +220,7 @@ a {
         /* Media query for tablet/desktop */
         @media screen and (min-width: 768px) {
             .container {
-                max-width: 768px;
+               /* max-width: 768px; */
                 margin: 20px auto;
             }
 
