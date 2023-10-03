@@ -56,8 +56,11 @@ width: 100%;
             font-size: 24px;
             margin-bottom: 10px;
         }
-h4 {
- font-size: 1.6em;}
+.caption h4 {
+ font-size: 1.6em;
+    max-width: 15ch;
+    margin: 0 auto;
+}
 
         p, div {
             font-size: 16px;
@@ -215,7 +218,7 @@ a {
             color: #025029;
             padding: 10px;
             text-align: center;
-                max-width:15ch;
+               
         }
 
         /* Remove default link styles */
