@@ -190,6 +190,7 @@ a {
         .gallery-item {
             position: relative;
             overflow: hidden;
+                max-width:50%;
         }
 
         .gallery-item img {
