@@ -192,6 +192,7 @@ a {
             flex-basis: calc(25% - 10px); /* Two columns on mobile, with 10px spacing between */
             margin-bottom: 20px;
             position: relative;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .gallery-item img {
