@@ -180,16 +180,17 @@ a {
         }
 
          .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* Four columns on desktop, two on mobile */
-            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             padding: 20px;
         }
 
         /* Individual gallery item */
         .gallery-item {
+            flex-basis: calc(50% - 10px); /* Two columns on mobile, with 10px spacing between */
+            margin-bottom: 20px;
             position: relative;
-            overflow: hidden;
         }
 
         .gallery-item img {
