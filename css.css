@@ -60,7 +60,7 @@ width: 100%;
   }
         
 .heading {
-    padding: 0 20px;
+    padding: 0;
     box-shadow: unset;
 }
 }
@@ -81,20 +81,21 @@ width: 100%;
   color: #333; /* Text color for links */
 }
 .monthplant{
-        border:1px solid #025029;
+        border:2px solid #025029;
 }
-
+.monthgarden{
+   border:2px solid #9b3821;}
 
 .monthplant p, .monthgarden p {
         font-size:18px;
-       
-        font-weight:600;
+               font-weight:600;
 }
-.monthplant p,  {
+.monthplant p  {
       
         color:#9b3821;
       
-}.monthgarden p {
+}
+.monthgarden p {
     color: #025029;
 
 }
@@ -168,7 +169,7 @@ button {
     transition: left 0.3s;
     z-index: 4;
     display: none;
-    max-width: 1200px;
+    max-width: 1024px;
         }
 
         .drawer.active {
@@ -298,7 +299,7 @@ font-size:1.8em;
         /* Media query for larger desktops */
         @media screen and (min-width: 1200px) {
             .container {
-                max-width: 1200px;
+                max-width: 1024px;
             }
         }
       @media screen and (max-width: 600px) {
