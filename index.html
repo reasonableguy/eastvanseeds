@@ -36,6 +36,11 @@
     </header>
 
 <style>
+.monthcontainer{
+	 display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 	/* Default styles for items */
 .monthitem {
   width: 100%;
@@ -50,7 +55,7 @@
 }
 
 .monthitem img {
-  max-width: 24%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -60,7 +65,7 @@
 
   .monthitem {
     /* Set the width to 24% for four columns */
-    width: 100%;
+    width: 24%;
     margin-bottom: 10px; /* Adjust the spacing between items */
   }
 }
@@ -80,7 +85,7 @@
 
     
     
-    <div class="container">
+    <div class="container monthcontainer">
         <h1>Plant This Month - October </h1>
   <a href="link1.html" class="monthitem">
     <img src="/docs/assets/garlic.jpg" alt="Image 1">
