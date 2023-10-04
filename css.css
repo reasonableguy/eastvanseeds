@@ -51,7 +51,12 @@ width: 100%;
             margin: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
-
+.heading {
+        margin:0 auto;
+}
+.heading h2{    
+        font-size: 24px;
+      }
         h1 {
             font-size: 24px;
             margin-bottom: 10px;
