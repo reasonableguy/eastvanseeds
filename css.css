@@ -70,7 +70,7 @@ width: 100%;
         }
 /* Default styles for items */
 .monthitem {
-  width: 100%;
+  width: 49%;
   /* Add other styles like padding, margin, etc., as needed */
   box-sizing: border-box;
   text-align: center;
