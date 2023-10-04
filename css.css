@@ -79,6 +79,7 @@ width: 100%;
   align-items: center;
   text-decoration: none; /* Remove underline from links */
   color: #333; /* Text color for links */
+        padding:8px 4px;
 }
 .monthplant, .monthgarden{
         border:2px solid #025029;
