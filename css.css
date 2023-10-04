@@ -80,24 +80,18 @@ width: 100%;
   text-decoration: none; /* Remove underline from links */
   color: #333; /* Text color for links */
 }
-.monthplant{
+.monthplant, .monthgarden{
         border:2px solid #025029;
 }
 .monthgarden{
-   border:2px solid #9b3821;}
+        width:49% !important;
+}
+                
 
 .monthplant p, .monthgarden p {
         font-size:18px;
                font-weight:600;
-}
-.monthplant p  {
-      
-        color:#9b3821;
-      
-}
-.monthgarden p {
-    color: #025029;
-
+        color:#9b3821;     
 }
 
 
