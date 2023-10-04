@@ -80,6 +80,7 @@ width: 100%;
   align-items: center;
   text-decoration: none; /* Remove underline from links */
   color: #333; /* Text color for links */
+        border:1px solid #025029;
 }
 
 
