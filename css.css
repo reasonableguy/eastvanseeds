@@ -70,8 +70,7 @@ width: 100%;
         }
 /* Default styles for items */
 .monthitem {
-  width: 49%;
-  /* Add other styles like padding, margin, etc., as needed */
+    /* Add other styles like padding, margin, etc., as needed */
   box-sizing: border-box;
   text-align: center;
   display: flex;
@@ -84,10 +83,12 @@ width: 100%;
 .monthplant, .monthgarden{
         border:2px solid #025029;
 }
-.monthgarden{
-        width:49% !important;
+.monthplant{
+        width:49% ;
 }
-                
+   .monthgarden{
+        width:100% ;
+}             
 
 .monthplant p, .monthgarden p {
         font-size:18px;
@@ -317,11 +318,15 @@ max-width:50%;
                 /* Media query for desktop */
 @media (min-width: 768px) {
  
-
+.monthgarden{
+width:49%;
+}
   .monthitem {
     /* Set the width to 24% for four columns */
     width: 24%;
-    margin-bottom: 10px; /* Adjust the spacing between items */
+  }
+  .monthgarden,   .monthitem {  
+          margin-bottom: 10px; /* Adjust the spacing between items */
   }
 }
 /* Media query for mobile */
