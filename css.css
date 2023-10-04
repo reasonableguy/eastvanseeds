@@ -61,6 +61,24 @@ width: 100%;
             font-size: 24px;
             margin-bottom: 10px;
         }
+/* Default styles for items */
+.monthitem {
+  width: 100%;
+  /* Add other styles like padding, margin, etc., as needed */
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Text color for links */
+}
+
+
+
+
+
+
 .caption h4 {
  font-size: 1.6em;
     max-width: 15ch;
@@ -279,5 +297,23 @@ max-width:50%;
             flex-basis: calc(100% - 10px); /* Two columns on mobile, with 10px spacing between */
  }
                }
-                
+                /* Media query for desktop */
+@media (min-width: 768px) {
+ 
+
+  .monthitem {
+    /* Set the width to 24% for four columns */
+    width: 24%;
+    margin-bottom: 10px; /* Adjust the spacing between items */
+  }
+}
+
+/* Media query for mobile */
+
+  /* You can add specific styles for mobile here */
+  .monthitem {
+    /* Mobile-specific styles for each item */
+    margin-bottom: 10px; /* Add space between items on mobile */
+  }
+}
  
