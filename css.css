@@ -85,12 +85,19 @@ width: 100%;
 }
 
 
-.plant{
+.monthplant p, .monthgarden p {
         font-size:18px;
-        color:#9b3821;
+       
         font-weight:600;
 }
+.monthplant p,  {
+      
+        color:#9b3821;
+      
+}.monthgarden p {
+    color: #025029;
 
+}
 
 
 .caption h4 {
