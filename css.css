@@ -308,9 +308,7 @@ max-width:50%;
                 /* Media query for desktop */
 @media (min-width: 768px) {
  
-.monthcontainer{
-        display:block;
-}
+
   .monthitem {
     /* Set the width to 24% for four columns */
     width: 24%;
@@ -319,9 +317,7 @@ max-width:50%;
 }
 /* Media query for mobile */
 @media (max-width: 767px) {
-  .monthcontainer {
-    display: block;
-  }
+
   /* You can add specific styles for mobile here */
   .monthitem {
     /* Mobile-specific styles for each item */
