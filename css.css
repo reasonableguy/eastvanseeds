@@ -60,12 +60,11 @@ width: 100%;
   }
         
 .heading {
-        margin:0 auto;
+    padding: 0 20px;
+    box-shadow: unset;
 }
-.heading h2{    
-        font-size: 24px;
-      }
-        h1 {
+}
+.heading h2,        h1 {
             font-size: 24px;
             margin-bottom: 10px;
         }
@@ -278,7 +277,7 @@ font-size:1.8em;
                 margin: 20px auto;
             }
 
-            h1 {
+            .heading h2,   h1 {
                 font-size: 32px;
             }
 
