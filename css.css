@@ -64,6 +64,7 @@ width: 100%;
     box-shadow: unset;
                padding-top:40px !important;
         position:relative;
+        margin-top:20px;
 
 }
 .heading:not(:first-child){
