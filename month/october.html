@@ -1,4 +1,3 @@
- <div class="october">
 <div class="heading container headingplant">        
   <h2>Plant This Month - October </h2>
 </div>
@@ -72,4 +71,66 @@
   </a>
 
     </div>
-   </div>
+
+
+<div class="Container">
+
+	  <label for="sortSelect">Sort By:</label>
+  <select id="sortSelect" onchange="sortDivs()">
+    <option value="alphabetical">Alphabetical</option>
+    <option value="reverse">Reverse Alphabetical</option>
+    <option value="featured">Featured</option>
+  </select>
+
+	
+  <div id="RecipeContainer">
+    <div id="banana">Banana</div>
+    <div id="apple">Apple</div>
+    <div id="cherry">Cherry</div>
+    <div id="date">Date</div>
+    <div id="featured">Featured</div>
+  </div>
+
+
+</div>
+  <script>
+    function sortDivs() {
+      // Select the div container and get all the div elements inside it
+      const container = document.getElementById("RecipeContainer");
+      const divs = container.querySelectorAll("div");
+
+      // Convert NodeList to an array
+      const divArray = Array.from(divs);
+
+      // Get the selected sorting type from the dropdown
+      const selectedSort = document.getElementById("sortSelect").value;
+
+      // Sort the divs based on the selected sorting type
+      divArray.sort((a, b) => {
+        const idA = a.id.toLowerCase();
+        const idB = b.id.toLowerCase();
+
+        if (selectedSort === 'alphabetical') {
+          return idA.localeCompare(idB);
+        }
+        else if (selectedSort === 'reverse') {
+          return idB.localeCompare(idA);
+        }
+        else if (selectedSort === 'featured') {
+          // Place the 'featured' div at the beginning and sort the rest alphabetically
+          if (a.id === 'featured') return -1;
+          if (b.id === 'featured') return 1;
+          return idA.localeCompare(idB);
+        }
+
+        return 0; // Default: no sorting
+      });
+
+      // Clear the container
+      container.innerHTML = "";
+
+      // Append the sorted divs back to the container
+      divArray.forEach(div => container.appendChild(div));
+    }
+  </script>
+
