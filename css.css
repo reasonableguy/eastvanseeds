@@ -62,6 +62,8 @@ width: 100%;
 .heading {
     padding: 0;
     box-shadow: unset;
+}
+.heading:not(:first-child){
         margin-top:60px !important;
 }
 
