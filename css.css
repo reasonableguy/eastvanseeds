@@ -214,6 +214,10 @@ margin: 15px auto;
 a {
         text-decoration-color: #025029;
 }
+a:hover, a:hover p {
+    background-color: #025029;
+    color: #ffffff;
+}
 
 .drawer >ul >a:hover, .drawer >ul >a:hover li{
         background-color:#025029;
