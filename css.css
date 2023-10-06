@@ -31,6 +31,7 @@
     height: 150px;
     top: 0;
     margin: 0 auto;
+                   z-index:1;
 }
         
 
@@ -199,8 +200,8 @@ ul {
 }
 
         li {
-       padding: 10px 0 10px 50px;
-    font-size: 1.6em;
+margin: 15px auto;
+                font-size: 1.6em;
     color: #025029;
   }
         
