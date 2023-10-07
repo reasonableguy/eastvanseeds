@@ -92,7 +92,18 @@ background-image: url(docs/assets/spring-healthy-vegan-food-cooking-ingredients-
 <div class="heading container">        
   <h2>Check out our photos on Instagram </h2>
 </div>
-   <style>.igcontainer{overflow:hidden;}#instagramfeed{margin-top:-140px;}</style><div class="igcontainer container">    
+   <style>
+	   .igcontainer{
+		   overflow:hidden;
+		      max-height: 200px; /* Set the maximum height */
+    overflow-y: scroll; /* Enable vertical scrolling when content exceeds the height */
+  }
+	   }
+	   #instagramfeed{
+		   margin-top:-140px;
+	   }
+   </style>
+	<div class="igcontainer container">    
 	   <iframe id="instagramfeed" src="https://www.instagram.com/eastvanseeds/embed/" width="500" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
    </div></body>
 
