@@ -303,10 +303,21 @@ font-size:1.8em;
 
 /*Instagram Carousel */
 
-iframe.instagramfeed{
-        width:100%;
-        min-height:400px;
-}
+   .ig-iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
+        }
+
+        /* Style the iframe */
+        .ig-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove iframe border */
+        }
 
  
 /*           Media Queries        */
