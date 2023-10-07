@@ -306,7 +306,7 @@ font-size:1.8em;
    .ig-iframe-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
+            padding-bottom: 70%; /* 56.25% = 16:9 aspect ratio (adjust as needed) */
         }
 
         /* Style the iframe */
