@@ -303,7 +303,10 @@ font-size:1.8em;
 
 /*Instagram Carousel */
 
-
+iframe.instagramfeed{
+        width:100%;
+        min-height:400px;
+}
 
  
 /*           Media Queries        */
