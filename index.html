@@ -92,11 +92,24 @@ background-image: url(docs/assets/spring-healthy-vegan-food-cooking-ingredients-
 <div class="heading container">        
   <h2>Check out our photos on Instagram </h2>
 </div>
-    <!-- Replace 'YOUR_INSTAGRAM_USERNAME' with your Instagram username -->
    <div class=" container">    
-	   <iframe src="https://www.instagram.com/eastvanseeds/embed/" width="500" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+	   <iframe id="instagramfeed" src="https://www.instagram.com/eastvanseeds/embed/" width="500" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
    </div></body>
+<script>
+const iframe = document.getElementById('instagramfeed');
 
+// Check if the iframe has loaded
+iframe.onload = function() {
+  // Access the iframe's contentDocument
+  const iframeContent = iframe.contentDocument || iframe.contentWindow.document;
+
+  // Select the specific element within the iframe and hide it
+  const elementToHide = iframeContent.querySelector('.EmbedProfile > :nth-child(1) > :nth-child(1) > :nth-child(1)');
+  if (elementToHide) {
+    elementToHide.style.display = 'none';
+  }
+};
+</script>
 	
 
 	
