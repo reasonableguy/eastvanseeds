@@ -302,12 +302,10 @@ font-size:1.8em;
 
 /*Instagram Carousel */
 
-.EmbedProfile {
-background-color:#333;
-}
-.EmbedProfile > :nth-child(1) > :nth-child(1) > :nth-child(1) {
-        display:none !important;
-}
+
+
+ 
+/*           Media Queries        */
 
         /* Media query for tablet/desktop */
         @media screen and (min-width: 768px) {
