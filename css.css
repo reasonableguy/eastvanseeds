@@ -302,7 +302,7 @@ font-size:1.8em;
 
 /*Instagram Carousel */
 .EmbedProfile > :nth-child(1) > :nth-child(1) > :nth-child(1) {
-        display:none;
+        display:none !important;
 }
 
         /* Media query for tablet/desktop */
