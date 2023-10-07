@@ -58,6 +58,7 @@ width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+        padding-bottom:10px;
   }
         
 .heading {
