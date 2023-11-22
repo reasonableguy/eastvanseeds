@@ -36,7 +36,10 @@
         
 
         /* Logo styles */
-       .logo {
+     .logo a:hover {
+    background-color: none;
+}
+.logo {
        margin:0 auto;
        }
         .logo img {
