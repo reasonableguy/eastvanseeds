@@ -112,11 +112,12 @@ background-size: cover;
   <h2>Check out our photos on Instagram </h2>
 </div>
 
-
+  
 
     <div class="ig-iframe-container container">
-	    <iframe src="https://www.instagram.com/eastvanseeds/embed/" onload="this.insertAdjacentHTML('afterend', (this.contentDocument.body||this.contentDocument).innerHTML);this.remove()"></iframe>
+	 <iframe src="https://www.instagram.com/eastvanseeds/embed/" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 
+	    
     </div>
 
 
