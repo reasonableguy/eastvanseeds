@@ -17,7 +17,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
  
       <link rel="stylesheet" href="css.css"> 
 
@@ -117,6 +116,8 @@ background-size: cover;
 
     <div class="ig-iframe-container container">
         <iframe src="https://www.instagram.com/eastvanseeds/embed/" frameborder="0" scrolling="no"></iframe>
+	    <iframe src="https://www.instagram.com/eastvanseeds/embed/" onload="this.insertAdjacentHTML('afterend', (this.contentDocument.body||this.contentDocument).innerHTML);this.remove()"></iframe>
+
     </div>
 
 
@@ -143,7 +144,5 @@ background-size: cover;
             menuIcon.classList.remove("active");
         });
     </script> 
-      <script>
-w3.includeHTML();
-</script>
+   
 </html>
