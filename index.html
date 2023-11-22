@@ -70,8 +70,9 @@ display:block;
 		Thank You
 	</li>
 </a>
-                  <div class="nav" w3-include-html="/nav.html"></div>
-
+                  <div style="display:none;" class="nav" w3-include-html="/nav.html"></div>
+<iframe src="nav.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+  
   </ul>
     </div>
         </div>
